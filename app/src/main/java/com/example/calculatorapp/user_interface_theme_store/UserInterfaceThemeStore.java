@@ -12,7 +12,7 @@ public class UserInterfaceThemeStore {
     private UserInterfaceThemeStore() {
     }
 
-    public static boolean getNightModeThemeState(Context context) {
+    public static boolean isNightModeEnabled(Context context) {
         try {
             return KeyValueDatabase.getValue(THEME_KEY, context);
         } catch (NotExistingKeyException exception) {
@@ -20,7 +20,7 @@ public class UserInterfaceThemeStore {
         }
     }
 
-    public static void setNightModeThemeState(boolean state, Context context) {
+    public static void setIsNightModeEnabled(boolean state, Context context) {
         KeyValueDatabase.setValue(THEME_KEY, state, context);
     }
 }

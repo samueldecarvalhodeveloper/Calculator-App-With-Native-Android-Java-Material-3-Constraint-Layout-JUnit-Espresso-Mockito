@@ -61,26 +61,26 @@ public class UserInterfaceThemeStoreTest {
     }
 
     @Test
-    public void testIfMethodGetNightModeThemeStateReturnsTheStoredThemeState() {
-        boolean storedThemeState = UserInterfaceThemeStore.getNightModeThemeState(context);
+    public void testIfMethodIsNightModeThemeStateReturnsTheStoredEnabled() {
+        boolean storedThemeState = UserInterfaceThemeStore.isNightModeEnabled(context);
 
         assertTrue(storedThemeState);
     }
 
     @Test
-    public void testIfMethodGetNightModeThemeStateReturnsTheDeviceThemeStateWhenStoredStateIsNotSet() {
+    public void testIfMethodIsNightModeThemeStateReturnsTheDeviceEnabledIsNotSet() {
         when(sharedPreferences.getAll()).thenReturn(emptyMap);
 
-        boolean storedThemeState = UserInterfaceThemeStore.getNightModeThemeState(context);
+        boolean storedThemeState = UserInterfaceThemeStore.isNightModeEnabled(context);
 
         assertFalse(storedThemeState);
     }
 
     @Test
-    public void testIfMethodSetNightModeThemeStateStoresWantedStateToKeyValueDatabase() {
-        UserInterfaceThemeStore.setNightModeThemeState(true, context);
+    public void testIfMethodSetIsNightModeEnabledToKeyValueDatabase() {
+        UserInterfaceThemeStore.setIsNightModeEnabled(true, context);
 
-        boolean storedThemeState = UserInterfaceThemeStore.getNightModeThemeState(context);
+        boolean storedThemeState = UserInterfaceThemeStore.isNightModeEnabled(context);
 
         assertTrue(storedThemeState);
     }

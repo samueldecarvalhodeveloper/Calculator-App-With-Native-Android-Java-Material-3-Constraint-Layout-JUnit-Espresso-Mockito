@@ -15,7 +15,7 @@ public class UserInterfaceThemeStateAdapter {
     }
 
     public static void setInitialAppTheme(Context context) {
-        boolean isUserInterfaceInNightMode = UserInterfaceThemeStore.getNightModeThemeState(context);
+        boolean isUserInterfaceInNightMode = UserInterfaceThemeStore.isNightModeEnabled(context);
 
         if (isUserInterfaceInNightMode) {
             AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_YES);
@@ -26,11 +26,11 @@ public class UserInterfaceThemeStateAdapter {
 
     public static void toggleTheme(Context context) {
         if (UserInterfaceSpecifications.isUserInterfaceInNightMode()) {
-            UserInterfaceThemeStore.setNightModeThemeState(false, context);
+            UserInterfaceThemeStore.setIsNightModeEnabled(false, context);
 
             AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_NO);
         } else {
-            UserInterfaceThemeStore.setNightModeThemeState(true, context);
+            UserInterfaceThemeStore.setIsNightModeEnabled(true, context);
 
             AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_YES);
         }

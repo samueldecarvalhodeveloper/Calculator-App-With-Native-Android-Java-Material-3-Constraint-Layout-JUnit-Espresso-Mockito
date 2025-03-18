@@ -68,7 +68,7 @@ public class SystemTest {
         int currentUserInterfaceMode = AppCompatDelegate.getDefaultNightMode();
 
         boolean storedUserInterfaceThemeState =
-                UserInterfaceThemeStore.getNightModeThemeState(curretActivityContext);
+                UserInterfaceThemeStore.isNightModeEnabled(curretActivityContext);
 
         assertEquals(AppCompatDelegate.MODE_NIGHT_YES, currentUserInterfaceMode);
 

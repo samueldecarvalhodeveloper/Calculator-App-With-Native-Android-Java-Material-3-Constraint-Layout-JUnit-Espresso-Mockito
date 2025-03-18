@@ -74,7 +74,7 @@ public class UserInterfaceThemeStateAdapterTest {
     public void testIfMethodToggleThemeTogglesTheApplicationThemeAndUpdatesTheKeyValueDatabase() {
         UserInterfaceThemeStateAdapter.toggleTheme(context);
 
-        boolean storedThemeState = UserInterfaceThemeStore.getNightModeThemeState(context);
+        boolean storedThemeState = UserInterfaceThemeStore.isNightModeEnabled(context);
         int currentThemeMode = AppCompatDelegate.getDefaultNightMode();
         int currentUiMode = ((UiModeManager) context.getSystemService(Context.UI_MODE_SERVICE)).getNightMode();
 

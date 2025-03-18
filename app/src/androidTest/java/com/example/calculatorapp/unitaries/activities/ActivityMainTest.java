@@ -42,7 +42,7 @@ public class ActivityMainTest {
 
     @Test
     public void testIfInitialThemeIsRetrievedFromThemeStoreAndConfiguredOnTheUserInterface() {
-        boolean storedUiMode = UserInterfaceThemeStore.getNightModeThemeState(curretActivityContext);
+        boolean storedUiMode = UserInterfaceThemeStore.isNightModeEnabled(curretActivityContext);
         boolean currentUiMode = UserInterfaceSpecifications.isUserInterfaceInNightMode();
 
         assertEquals(currentUiMode, storedUiMode);
