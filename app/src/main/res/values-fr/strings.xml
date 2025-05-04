@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Calculator App</string>
+    <string name="actionbar_menu_toggle_night_mode_title">Basculer En Mode Nuit</string>
+    <string name="not_valid_expression_message">Erreur (Expression Non Valide)</string>
+</resources>

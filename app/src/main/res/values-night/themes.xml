@@ -1,0 +1,47 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CalculatorApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:background">@color/primary_800</item>
+        <item name="android:statusBarColor">@color/primary_700</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Theme.CalculatorApp" parent="Base.Theme.CalculatorApp" />
+
+    <style name="Toolbar">
+        <item name="android:background">@color/primary_700</item>
+    </style>
+
+    <style name="ViewfinderValue">
+        <item name="android:textColor">
+            @color/neutrals_100
+        </item>
+    </style>
+
+    <style name="YellowButton">
+        <item name="buttonCharacterColor">
+            @color/neutrals_900
+        </item>
+        <item name="buttonBackground">
+            @drawable/yellow_button_background
+        </item>
+    </style>
+
+    <style name="PrimaryBlueButton">
+        <item name="buttonCharacterColor">
+            @color/neutrals_100
+        </item>
+        <item name="buttonBackground">
+            @drawable/primary_blue_button_background
+        </item>
+    </style>
+
+    <style name="SecondaryBlueButton">
+        <item name="buttonCharacterColor">
+            @color/neutrals_900
+        </item>
+        <item name="buttonBackground">
+            @drawable/secondary_blue_button_background
+        </item>
+    </style>
+</resources>

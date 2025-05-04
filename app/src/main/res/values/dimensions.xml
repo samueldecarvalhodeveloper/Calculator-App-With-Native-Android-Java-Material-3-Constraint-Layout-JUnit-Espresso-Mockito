@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="calculator_buttons_text_size">
+        16sp
+    </dimen>
+
+    <dimen name="calculator_viewfinder_gap_to_the_bottom">
+        16dp
+    </dimen>
+
+    <dimen name="calculator_keyboard_buttons_gap_to_the_bottom">
+        8dp
+    </dimen>
+</resources>

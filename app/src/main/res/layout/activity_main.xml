@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:theme="@style/Toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/toolbar_menu" />
+
+    <com.example.calculatorapp.components.Viewfinder
+        android:id="@+id/viewfinder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <com.example.calculatorapp.components.Button
+        android:id="@+id/clean_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/calculator_viewfinder_gap_to_the_bottom"
+        android:layout_marginBottom="8dp"
+        android:theme="@style/YellowButton"
+        app:buttonCharacter="C"
+        app:buttonContainerId="clean_button"
+        app:layout_constraintBottom_toTopOf="@+id/seven_button"
+        app:layout_constraintEnd_toStartOf="@id/division_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewfinder" />
+
+    <com.example.calculatorapp.components.Button
+        android:id="@+id/division_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/calculator_viewfinder_gap_to_the_bottom"
+        android:layout_marginBottom="8dp"
+        android:theme="@style/SecondaryBlueButton"
+        app:buttonCharacter="/"
+        app:buttonContainerId="division_button"
+        app:layout_constraintBottom_toTopOf="@+id/eight_button"
+        app:layout_constraintEnd_toEndOf="@id/multiplication_button"
+        app:layout_constraintStart_toEndOf="@id/clean_button"
+        app:layout_constraintTop_toBottomOf="@id/viewfinder" />
+
+    <com.example.calculatorapp.components.Button
+        android:id="@+id/multiplication_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/calculator_viewfinder_gap_to_the_bottom"
+        android:layout_marginBottom="8dp"
+        android:theme="@style/SecondaryBlueButton"
+        app:buttonCharacter="*"
+        app:buttonContainerId="multiplication_button"
+        app:layout_constraintBottom_toTopOf="@+id/nine_button"
+        app:layout_constraintEnd_toStartOf="@id/backspace_button"
+        app:layout_constraintStart_toEndOf="@id/division_button"
+        app:layout_constraintTop_toBottomOf="@id/viewfinder" />
+
+    <com.example.calculatorapp.components.Button
+        android:id="@+id/backspace_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/calculator_viewfinder_gap_to_the_bottom"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:theme="@style/YellowButton"
+        app:buttonCharacter="\u003C"
+        app:buttonContainerId="backspace_button"
+        app:layout_constraintBottom_toTopOf="@+id/subtraction_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/multiplication_button"
+        app:layout_constraintTop_toBottomOf="@id/viewfinder"
+        app:layout_constraintVertical_weight="1" />
+
+    <com.example.calculatorapp.components.Button
+        android:id="@+id/seven_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:theme="@style/PrimaryBlueButton"
+        app:buttonCharacter="7"
+        app:buttonContainerId="seven_button"
+        app:layout_constraintBottom_toTopOf="@+id/four_button"
+        app:layout_constraintEnd_toStartOf="@id/eight_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clean_button" />
+
+    <com.example.calculatorapp.components.Button
+        android:id="@+id/eight_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:theme="@style/PrimaryBlueButton"
+        app:buttonCharacter="8"
+        app:buttonContainerId="eight_button"
+        app:layout_constraintBottom_toTopOf="@+id/five_button"
+        app:layout_constraintEnd_toStartOf="@id/nine_button"
+        app:layout_constraintStart_toEndOf="@id/seven_button"
+        app:layout_constraintTop_toBottomOf="@id/division_button" />
+
+    <com.example.calculatorapp.components.Button
+        android:id="@+id/nine_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:theme="@style/PrimaryBlueButton"
+        app:buttonCharacter="9"
+        app:buttonContainerId="nine_button"
+        app:layout_constraintBottom_toTopOf="@+id/six_button"
+        app:layout_constraintEnd_toStartOf="@id/subtraction_button"
+        app:layout_constraintStart_toEndOf="@id/eight_button"
+        app:layout_constraintTop_toBottomOf="@id/multiplication_button" />
+
+    <com.example.calculatorapp.components.Button
+        android:id="@+id/subtraction_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:theme="@style/SecondaryBlueButton"
+        app:buttonCharacter="-"
+        app:buttonContainerId="subtraction_button"
+        app:layout_constraintBottom_toTopOf="@+id/addition_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/nine_button"
+        app:layout_constraintTop_toBottomOf="@id/backspace_button"
+        app:layout_constraintVertical_weight="1" />
+
+    <com.example.calculatorapp.components.Button
+        android:id="@+id/four_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:theme="@style/PrimaryBlueButton"
+        app:buttonCharacter="4"
+        app:buttonContainerId="four_button"
+        app:layout_constraintBottom_toTopOf="@+id/one_button"
+        app:layout_constraintEnd_toStartOf="@id/five_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seven_button" />
+
+    <com.example.calculatorapp.components.Button
+        android:id="@+id/five_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:theme="@style/PrimaryBlueButton"
+        app:buttonCharacter="5"
+        app:buttonContainerId="five_button"
+        app:layout_constraintBottom_toTopOf="@+id/two_button"
+        app:layout_constraintEnd_toStartOf="@id/six_button"
+        app:layout_constraintStart_toEndOf="@id/four_button"
+        app:layout_constraintTop_toBottomOf="@id/eight_button" />
+
+    <com.example.calculatorapp.components.Button
+        android:id="@+id/six_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:theme="@style/PrimaryBlueButton"
+        app:buttonCharacter="6"
+        app:buttonContainerId="six_button"
+        app:layout_constraintBottom_toTopOf="@+id/three_button"
+        app:layout_constraintEnd_toStartOf="@id/addition_button"
+        app:layout_constraintStart_toEndOf="@id/five_button"
+        app:layout_constraintTop_toBottomOf="@id/seven_button" />
+
+    <com.example.calculatorapp.components.Button
+        android:id="@+id/addition_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:theme="@style/SecondaryBlueButton"
+        app:buttonCharacter="+"
+        app:buttonContainerId="addition_button"
+        app:layout_constraintBottom_toTopOf="@+id/evaluation_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/six_button"
+        app:layout_constraintTop_toBottomOf="@id/subtraction_button"
+        app:layout_constraintVertical_weight="1" />
+
+    <com.example.calculatorapp.components.Button
+        android:id="@+id/one_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:theme="@style/PrimaryBlueButton"
+        app:buttonCharacter="1"
+        app:buttonContainerId="one_button"
+        app:layout_constraintBottom_toTopOf="@+id/zero_button"
+        app:layout_constraintEnd_toStartOf="@+id/two_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/four_button" />
+
+    <com.example.calculatorapp.components.Button
+        android:id="@+id/two_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:theme="@style/PrimaryBlueButton"
+        app:buttonCharacter="2"
+        app:buttonContainerId="two_button"
+        app:layout_constraintBottom_toTopOf="@+id/zero_button"
+        app:layout_constraintEnd_toStartOf="@id/three_button"
+        app:layout_constraintStart_toEndOf="@id/one_button"
+        app:layout_constraintTop_toBottomOf="@id/five_button" />
+
+    <com.example.calculatorapp.components.Button
+        android:id="@+id/three_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:theme="@style/PrimaryBlueButton"
+        app:buttonCharacter="3"
+        app:buttonContainerId="three_button"
+        app:layout_constraintBottom_toTopOf="@+id/point_button"
+        app:layout_constraintEnd_toStartOf="@id/evaluation_button"
+        app:layout_constraintStart_toEndOf="@id/two_button"
+        app:layout_constraintTop_toBottomOf="@id/six_button" />
+
+    <com.example.calculatorapp.components.Button
+        android:id="@+id/zero_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="@dimen/calculator_keyboard_buttons_gap_to_the_bottom"
+        android:theme="@style/PrimaryBlueButton"
+        app:buttonCharacter="0"
+        app:buttonContainerId="zero_button"
+        app:cornerRadius="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/point_button"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/one_button" />
+
+    <com.example.calculatorapp.components.Button
+        android:id="@+id/point_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="@dimen/calculator_keyboard_buttons_gap_to_the_bottom"
+        android:theme="@style/SecondaryBlueButton"
+        app:buttonCharacter="."
+        app:buttonContainerId="point_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/evaluation_button"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/zero_button"
+        app:layout_constraintTop_toBottomOf="@id/three_button" />
+
+    <com.example.calculatorapp.components.Button
+        android:id="@+id/evaluation_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="@dimen/calculator_keyboard_buttons_gap_to_the_bottom"
+        android:theme="@style/YellowButton"
+        app:buttonCharacter="="
+        app:buttonContainerId="evaluation_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/point_button"
+        app:layout_constraintTop_toBottomOf="@id/addition_button"
+        app:layout_constraintVertical_weight="2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

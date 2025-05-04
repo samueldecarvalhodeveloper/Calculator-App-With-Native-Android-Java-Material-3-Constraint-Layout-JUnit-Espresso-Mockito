@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="Button">
+        <attr name="buttonCharacter" format="string" />
+        <attr name="buttonCharacterColor" format="color" />
+        <attr name="buttonBackground" format="reference" />
+        <attr name="buttonContainerId" format="string" />
+    </declare-styleable>
+</resources>

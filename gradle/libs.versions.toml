@@ -1,0 +1,43 @@
+[versions]
+agp = "8.6.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+activity = "1.9.3"
+constraintlayout = "2.1.4"
+exp4j = "0.4.8"
+hiltAndroid = "2.48"
+hiltAndroidCompiler = "2.48"
+hiltAndroidGradlePlugin = "2.48"
+mockitoCore = "5.11.0"
+robolectric = "4.12"
+runner = "1.6.2"
+gradle = "8.6.0"
+runnerVersion = "1.6.1"
+rxjava = "3.1.6"
+
+[libraries]
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+exp4j = { module = "net.objecthunter:exp4j", version.ref = "exp4j" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroidCompiler" }
+hilt-android-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hiltAndroidGradlePlugin" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockitoCore" }
+robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
+rules = { module = "androidx.test:rules", version.ref = "runnerVersion" }
+runner = { module = "androidx.test:runner", version.ref = "runner" }
+gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
+runner-v161 = { module = "androidx.test:runner", version.ref = "runnerVersion" }
+rxjava = { module = "io.reactivex.rxjava3:rxjava", version.ref = "rxjava" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+
